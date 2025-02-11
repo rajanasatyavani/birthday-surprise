@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3d9e1; /* Background Color */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* Adjusted Larger Square Box */
+        .square-box {
+            width: 500px;
+            height: 500px;
+            background-image: url('blur-photo.jpg'); /* Replace 'your-photo.jpg' with your image file name */
+            background-size: cover; /* Ensure the image covers the entire box */
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Overlay to make text visible */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            z-index: 1;
+        }
+
+        /* Inner content of the square box */
+        .square-box > div {
+            position: absolute;
+            z-index: 2; /* Ensure content stays on top of the overlay */
+            color: white; /* White text for contrast */
+        }
+
+        h1, p {
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            background-color: #ff4081;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out forwards;
+            opacity: 0;
+            animation-delay: 1.5s;
+        }
+
+        .btn:hover {
+            background-color: #d81b60;
+            transform: scale(1.1);
+        }
+
+        audio {
+            margin-top: 20px;
+            width: 90%; /* Make audio player width responsive */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="square-box">
+        <!-- Semi-transparent overlay -->
+        <div class="overlay"></div>
+
+        <div>
+            <h1>🎶 Special Song for You 🎶</h1>
+            
+            <!-- Play the MP3 file (Make sure the MP3 file exists and is in the right directory) -->
+            <audio controls autoplay>
+                <source src="special_song.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+
+            <p>Playing a special song for you 💖. I just fell in love with the lyrics and the 2nd part of the song with deep meaning:</p>
+            <ul>
+                Prapancham 🌍..teleede jatai unte..👫</br>
+                Pramaadam anede ite raade..🥹</br>
+                Samudraalakannaa🌊.. sogasenta lote</br>
+                Elaa eedutunnaa munchestunde</br>
+                Kaalchutu unnade kougile 🫂 kolimilaa</br>
+                Idi varaku manasuku ❤️leni</br>
+                Paravasamedo modalainde💓...</br>
+                Melakuvalo kalalaa 🌚toche</br>
+                Maru janmedo modalainde ✨💫...</br>
+            </ul>
+
+            <br><br>
+            <a href="surprise.html" class="btn">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
+
